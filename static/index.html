@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkHub · 网址收藏</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 背景光斑 -->
+  <div class="bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- 顶栏 -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">🔗</div>
+        <div>
+          <h1>LinkHub</h1>
+          <p class="slogan">我的网址收藏</p>
+        </div>
+      </div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input id="search" type="text" placeholder="搜索网址、标题、备注…" autocomplete="off">
+      </div>
+      <button class="btn-add" id="btn-add"><span class="plus">+</span> 添加网址</button>
+    </div>
+  </header>
+
+  <!-- 主体 -->
+  <main class="main">
+    <div class="toolbar">
+      <div class="chips" id="chips"></div>
+      <span class="count" id="count"></span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="empty" id="empty" hidden>
+      <div class="big">🔖</div>
+      <h3 id="empty-title">还没有收藏任何网址</h3>
+      <p id="empty-text">点击「添加网址」,开始收藏你常去的网站吧</p>
+      <button class="btn-add" id="btn-add-empty"><span class="plus">+</span> 添加网址</button>
+    </div>
+  </main>
+
+  <!-- 添加 / 编辑弹窗 -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="modal">
+      <button class="modal-close" id="modal-close" title="关闭">×</button>
+      <h2 id="modal-title">添加网址</h2>
+      <form id="form" autocomplete="off">
+        <div class="form-group">
+          <label for="f-url">网址 <span class="req">*</span></label>
+          <input type="text" id="f-url" placeholder="https://example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="f-title">标题</label>
+          <input type="text" id="f-title" placeholder="可选,留空则使用域名">
+        </div>
+        <div class="form-group">
+          <label for="f-category">分类</label>
+          <input type="text" id="f-category" list="cat-list" placeholder="例如:工具 / 学习 / 娱乐">
+          <datalist id="cat-list"></datalist>
+        </div>
+        <div class="form-group">
+          <label for="f-note">备注</label>
+          <input type="text" id="f-note" placeholder="一句话描述(可选)">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-ghost" id="btn-cancel">取消</button>
+          <button type="submit" class="btn-primary">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
