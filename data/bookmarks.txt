@@ -1,5 +1,0 @@
-{"id": "a1b2c3d4e5f60718", "title": "B站", "url": "https://www.bilibili.com", "category": "娱乐", "note": "弹幕视频网站", "created_at": "2026-09-05T10:20:30"}
-{"id": "b2c3d4e5f6071829", "title": "GitHub", "url": "https://github.com", "category": "开发", "note": "代码托管平台", "created_at": "2026-09-04T09:15:00"}
-{"id": "c3d4e5f60718293a", "title": "知乎", "url": "https://www.zhihu.com", "category": "社区", "note": "", "created_at": "2026-09-03T21:45:12"}
-{"id": "d4e5f60718293a4b", "title": "掘金", "url": "https://juejin.cn", "category": "开发", "note": "技术社区", "created_at": "2026-09-01T14:30:00"}
-{"id": "6d85084edd8a41408e2b37f37f8d0608", "title": "百度", "url": "https://www.baidu.com", "category": "娱乐", "note": "123", "created_at": "2026-09-07T14:45:54"}
